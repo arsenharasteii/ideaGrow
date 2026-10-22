@@ -1,0 +1,13 @@
+:root {
+  --primary-color: #4c63b6;
+  --primary-hover: #3b4e96;
+  --bg-light: #f4f6fc;
+  --bg-white: #ffffff;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}

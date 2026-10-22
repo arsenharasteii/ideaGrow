@@ -1,0 +1,55 @@
+.header {
+  width: 100%;
+  padding: 16px 32px;
+}
+
+.whiteHeader {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  color: #1e293b;
+}
+
+.blueHeader {
+  background-color: #4c63b6;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: inherit;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
+.link {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+
+.link:hover {
+  opacity: 1;
+}
+
+.accountBtn {
+  background-color: #4c63b6;
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
