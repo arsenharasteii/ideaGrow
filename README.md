@@ -1,16 +1,74 @@
-# React + Vite
+# 🚀 IdeaGrow — Платформа для створення та розвитку ідей
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**IdeaGrow** — це веб-платформа, призначена для створення, розвитку, каталогізації та обговорення користувацьких ідей і спільних стартап-проєктів. Застосунок дозволяє презентувати власний задум, знаходити однодумців та відстежувати прогрес розробки.
 
-Currently, two official plugins are available:
+Проєкт виконано в рамках лабораторної роботи №2 з дисципліни "Представлення дизайну веб-додатку" (ДВНЗ «УжНУ», Факультет IT, Кафедра ПЗС).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🛠 Стек технологій
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Фреймворк:** React (Vite)
+* **Стилізація:** CSS Modules + Global CSS Variables (без використання CSS-фреймворків)
+* **Якість коду та форматування:** ESLint + Prettier
+* **Git Hooks:** Husky + lint-staged (автоматична перевірка коду перед комітом)
+* **Тестування:** Cypress (Компонентне / Юніт-тестування та E2E тести)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📱 Основні сторінки та функціонал
+
+1. **Головна сторінка (Landing Page):**
+   * Презентація ключових можливостей платформи.
+   * Віджет популярних ідей та вітрина трендових проєктів.
+   * Заклик до дії (CTA) щодо створення власного проєкту.
+
+2. **Каталог проєктів (Projects Catalog):**
+   * Адаптивна сітка карток проєктів.
+   * Пошуковий рядок, фільтрація за категоріями та сортування.
+   * Відображення тегів технологій та авторів.
+
+3. **Форма створення ідеї (Create Idea):**
+   * Поля для назви, вибору категорії, статусу розробки та опису.
+   * Інтерактивна зона завантаження зображення-обкладинки.
+   * Блок порад для якісного оформлення ідеї.
+
+4. **Аутентифікація (Sign In / Sign Up):**
+   * Форма входу та реєстрації користувача (без бізнес-логіки).
+   * Макети збереження сесії, відновлення пароля та швидкого входу через Google.
+
+---
+
+## 📁 Структура проєкту
+
+```text
+idea_grow/
+├── .husky/                  # Git-hooks (перевірка lint-staged перед комітом)
+├── cypress/                 # Cypress тестування
+│   └── e2e/                 # E2E тести (navigation.cy.js)
+├── docs/                    # Документація та артефакти дизайну
+│   ├── mockups/             # Низькодеталізовані макети (Wireframes)
+│   └── design/              # Фінальні UI-макети
+├── src/
+│   ├── assets/              # Графічні ресурси та іконки
+│   ├── components/          # Компоненти та їх юніт-тести
+│   │   ├── Button/          # (Button.jsx, Button.module.css, Button.cy.jsx)
+│   │   ├── CategoryFilter/
+│   │   ├── Footer/
+│   │   ├── Header/
+│   │   ├── ProjectCard/
+│   │   └── SearchBar/
+│   ├── pages/               # Сторінки застосунку
+│   │   ├── CreateIdeaPage/
+│   │   ├── HomePage/
+│   │   ├── LoginPage/
+│   │   ├── NotFoundPage/
+│   │   ├── ProjectsPage/
+│   │   └── RegisterPage/
+│   ├── styles/              # Глобальні стилі та змінні CSS
+│   ├── App.jsx              # Головний компонент
+│   └── main.jsx             # Точка входу React
+├── .eslintrc.cjs            # Конфігурація ESLint
+├── .prettierrc              # Конфігурація Prettier
+├── cypress.config.js        # Конфігурація Cypress
+└── package.json             # Залежності та скрипти
